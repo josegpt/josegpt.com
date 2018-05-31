@@ -1,5 +1,62 @@
+import List from '../components/List'
+
 export default () => (
-  <div>
-    <p>This is the main webpage</p>
-  </div>
+  <List
+    data={[
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      },
+      {
+        name: 'Insurance Manager'
+      }
+    ]}
+  />
 )

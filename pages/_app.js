@@ -1,8 +1,9 @@
 import React from 'react'
 import App, { Container } from 'next/app'
+import Page from '../components/Page'
 
 class MyApp extends App {
-  static async getInitialProps ({ Component, router, ctx }) {
+  static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {}
 
     if (Component.getInitialProps) {
@@ -12,11 +13,16 @@ class MyApp extends App {
     return { pageProps }
   }
 
-  render () {
+  render() {
     const { Component, pageProps } = this.props
-    return <Container>
-      <Component {...pageProps} />
-    </Container>
+
+    return (
+      <Container>
+        <Page>
+          <Component {...pageProps} />
+        </Page>
+      </Container>
+    )
   }
 }
 
