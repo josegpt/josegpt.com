@@ -4,7 +4,7 @@
   "description": "My personal space :)",
   "main": "index.js",
   "scripts": {
-    "start": "next" 
+    "start": "next"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,19 @@
   },
   "homepage": "https://github.com/josegpt/pt-portfolio#readme",
   "dependencies": {
+    "apollo-boost": "^0.1.6",
+    "downshift": "^1.31.14",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "next": "^6.0.3",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "next-plugin-graphql": "0.0.1",
+    "next-with-apollo": "^3.0.2",
+    "react": "^16.3.2",
+    "react-apollo": "^2.1.4",
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.1"
   }
 }
