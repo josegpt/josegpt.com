@@ -4,7 +4,9 @@
   "description": "My personal space :)",
   "main": "index.js",
   "scripts": {
-    "start": "next"
+    "start": "next start",
+    "dev": "next",
+    "build": "next build"
   },
   "repository": {
     "type": "git",
