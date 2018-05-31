@@ -53,9 +53,6 @@ export default () => (
       },
       {
         name: 'Insurance Manager'
-      },
-      {
-        name: 'Insurance Manager'
       }
     ]}
   />
