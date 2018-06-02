@@ -10,7 +10,7 @@ const Meta = () => (
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
       {/* <link rel="shortcut icon" href="/static/favicon.png" /> */}
       {/* <link rel="stylesheet" type="text/css" href="/static/nprogress.css" /> */}
-      <title>Jose G. PT | Developer</title>
+      <title>JoseGPT | Full Stack Developer</title>
     </Head>
   </>
 )

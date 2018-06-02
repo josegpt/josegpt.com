@@ -1,33 +1,51 @@
 import React from 'react'
 import styled from 'styled-components'
+import Icon from './Icon'
 
 const Footer = styled.footer`
-  grid-column: center-start / center-end;
-  place-self: center;
+  align-items: center;
+  display: grid;
+  grid-column: full-start / full-end;
+  justify-content: center;
 `
 
 const Contact = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 3rem;
+
+`
+
+const ContactList = styled.ul`
+  list-style: none;
+`
+
+const ContactItem = styled.li`
+  display: inline-block;
+`
+
+const ContactLink = styled.a`
+  color: inherit;
+  margin: 0 1.5rem;
 `
 
 const ParagraphWithLove = styled.p`
-  margin-top: 1.5rem;
   text-align: center;
 `
 
 export default () => (
   <Footer>
     <Contact>
-      <i className="fa fa-facebook facebook" aria-hidden="true"></i>
-      <i className="fa fa-instagram instagram" aria-hidden="true"></i>
-      <i className="fa fa-codepen codepen" aria-hidden="true"></i>
-      <i className="fa fa-github-alt github" aria-hidden="true"></i>
-      <i className="fa fa-linkedin linkedin" aria-hidden="true"></i>
+      <ContactList>
+        <ContactItem>
+          <ContactLink target="_blank" href="https://www.facebook.com/joseept"><Icon name="facebook" color="#47639E" /></ContactLink>
+          <ContactLink target="_blank" href="https://www.instagram.com/joseept"><Icon name="instagram" color="#E84B50" /></ContactLink>
+          <ContactLink target="_blank" href="https://codepen.io/josegpt"><Icon name="codepen" color="#191919" /></ContactLink>
+          <ContactLink target="_blank" href="https://github.com/josegpt"><Icon name="github-alt" color="#2B3137" /></ContactLink>
+          <ContactLink target="_blank" href="https://www.linkedin.com/in/josegpt"><Icon name="linkedin" color="#0077B5" /></ContactLink>
+          <ContactLink href="mailto:josegpt27@gmail.com"><Icon name="envelope-o" color="#888" /></ContactLink>
+        </ContactItem>
+      </ContactList>
     </Contact>
     <ParagraphWithLove>
-      with <i className="fa fa-heart" aria-hidden="true"></i> by josegpt
+      with <Icon name="heart" color="red" /> by josegpt
     </ParagraphWithLove>
   </Footer>
 )

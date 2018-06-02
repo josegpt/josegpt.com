@@ -2,10 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Header = styled.header`
-  grid-column: center-start / center-end;
-  place-self: center;
+  align-items: center;
+  display: grid;
+  grid-column: full-start / full-end;
+  justify-content: center;
+`
+
+const PrimaryHeading = styled.h1`
+  font-weight: 300;
 `
 
 export default () => (
-  <Header>josegpt</Header>
+  <Header>
+    <PrimaryHeading>josegpt</PrimaryHeading>
+  </Header>
 )
