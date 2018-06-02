@@ -19,7 +19,7 @@ export default styled.section`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: dodgerblue;
+    background-color: #F92720;
     outline: .1rem solid #555;
   }
 `

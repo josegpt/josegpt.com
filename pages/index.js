@@ -8,7 +8,7 @@ const Index = ({ repos }) => (
 )
 
 Index.getInitialProps = async () => {
-  const { data } = await axios.get('https://api.github.com/users/josegpt/repos')
+  const { data } = await axios.get('https://api.github.com/users/josegpt/repos?sort=updated')
 
   return {
     repos: data
