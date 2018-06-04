@@ -9,7 +9,7 @@ const handle = app.getRequestHandler()
 const visitor = ua('UA-120228904-1', { https: true })
 
 
-visitor.pageview("/").send()
+visitor.pageview('/').send()
 
 app.prepare()
   .then(() => {
