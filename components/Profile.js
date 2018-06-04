@@ -13,7 +13,7 @@ const Photo = styled.img`
 `
 
 const Intro = styled.article`
-
+  font-size: 2rem;
 `
 
 export default () => (
