@@ -6,10 +6,11 @@ const PORT = process.env.PORT || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-const visitor = ua('UA-120228904-1', { https: true })
+const visitor = ua(process.env.GA_CODE, { https: true })
 
-
-visitor.pageview('/').send()
+if (!dev) {
+  visitor.pageview('/').send()
+}
 
 app.prepare()
   .then(() => {
