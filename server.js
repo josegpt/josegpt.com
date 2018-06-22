@@ -1,3 +1,5 @@
+'use strict'
+
 const next = require('next')
 const express = require('express')
 const ua = require('universal-analytics')

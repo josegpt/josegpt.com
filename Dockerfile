@@ -1,16 +1,14 @@
-FROM node:latest
-# Create app directory
+FROM node:alpine
 
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-# Install app dependencies
-COPY package.json /usr/src/app/
+COPY package*.json .
+
 RUN npm install
 
-# Bundle app source
-COPY . /usr/src/app
-RUN npm run build
+COPY . .
+
+RUN npm run build && npm cache clean --force
 
 EXPOSE 3000
 
