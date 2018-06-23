@@ -1,7 +1,6 @@
-import ReactGA from 'react-ga'
+import * as gtag from '../lib/gtag'
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
-import { initGA, logPageView } from '../utils/analytics'
 import Meta from './Meta'
 import Header from './Header'
 import Main from './Main'
@@ -62,11 +61,7 @@ const Container = styled.div`
 
 class Page extends Component {
   componentDidMount() {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-    }
-    logPageView()
+    gtag.pageview(window.location.pathname)
   }
   render() {
     return (

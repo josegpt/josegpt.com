@@ -1,6 +1,8 @@
 import { ServerStyleSheet } from 'styled-components'
 import Document, { Head, Main, NextScript } from 'next/document'
 
+import { GA_TRACKING_ID } from '../lib/gtag'
+
 class MyDocument extends Document {
   static async getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -12,7 +14,23 @@ class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head>{this.props.styleTags}</Head>
+        <Head>
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `}}
+          />
+          {this.props.styleTags}
+        </Head>
         <body>
           <Main />
           <NextScript />
