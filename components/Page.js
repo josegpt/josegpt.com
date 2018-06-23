@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga'
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
 import Meta from './Meta'
@@ -59,6 +60,10 @@ const Container = styled.div`
 `
 
 class Page extends Component {
+  componentDidMount() {
+    ReactGA.initialize(process.env.GA_CODE)
+    ReactGA.pageview(window.location.pathname)
+  }
   render() {
     return (
       <Container>
