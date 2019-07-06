@@ -1,0 +1,71 @@
+.title-box {
+  display: grid;
+  justify-content: center;
+  margin: 10rem 0;
+  
+  &__heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    &--main {
+      display: block;
+      font-size: 7rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    &--sub {
+      color: $secondary-text;
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  }
+}
+.card {
+  background-color: $accent-color;
+  &__title {
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+  }
+  &__main {
+    align-items: center;
+    color: $color-text;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2rem 4rem;
+    text-align: center;
+    
+    & p {
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+}
+.social-networks {  
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 5rem));
+    justify-content: center;
+    justify-items: center;
+    list-style: none;
+  }
+  &__item {
+    color: $color-text;
+    transition: all .2s;
+    
+    &:hover {
+      color: $divider-color;
+    }
+  }
+  &__link {
+    &:visited,
+    &:link {
+      color: inherit;
+      display: block;
+      font-size: 3rem;
+    }
+  }
+}

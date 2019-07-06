@@ -1,0 +1,19 @@
+.header {
+  background-color: $primary-color;
+  display: grid;
+  grid-column: full-start / full-end;
+  grid-template-columns: .3fr 1fr;
+  grid-template-rows: 1fr 4rem;
+  
+  &__outer {
+    display: grid;
+    grid-column: 1 / span 1;
+    grid-row: 1 / -1;
+    
+  }
+  &__inner {
+    background-color: $color-text;
+    grid-column: 2 / -1;
+    grid-row: 1 / span 1;
+  }
+}

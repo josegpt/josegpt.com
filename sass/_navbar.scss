@@ -1,0 +1,50 @@
+.navbar {
+  display: grid;
+  justify-content: center;
+  padding: 4rem;
+  
+  &__list {
+    background-color: $color-text;
+    display: flex;
+    list-style: none;
+  }
+  &__item {
+    color: $primary-color;
+    position: relative;
+    
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+    
+    &::after {
+      background-color: $primary-color;
+      bottom: -2rem;
+      content: "";
+      height: .5rem;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%) scale(0);
+      transition: all .2s;
+      width: .5rem;
+    }
+    
+    &:hover,
+    &--active {
+      &::after {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      color: inherit;
+      display: block;
+      font-family: inherit;
+      font-weight: 700;
+      letter-spacing: .3rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

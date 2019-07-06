@@ -1,7 +1,0 @@
-node_modules
-npm-debug.log
-.next
-.git
-*Dockerfile*
-*docker-compose*
-.DS_Store

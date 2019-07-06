@@ -1,0 +1,32 @@
+.heading-primary {
+  color: inherit;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  
+  &::after {
+    background-color: $primary-color;
+    bottom: -1rem;
+    content: "";
+    height: .5rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all .2s;
+    width: 20%;
+  }
+}
+
+.heading-secondary {
+  color: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.heading-tertiary {
+  color: $secondary-text;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
