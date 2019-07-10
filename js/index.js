@@ -66,11 +66,11 @@ const scrollToTop = () => {
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 90) {
-    toTopButton.style.visibility = "visible"
-    toTopButton.style.opacity = 1
+    elements.toTopButton.style.visibility = "visible"
+    elements.toTopButton.style.opacity = 1
   } else {
-    toTopButton.style.visibility = "hidden"
-    toTopButton.style.opacity = 0
+    elements.toTopButton.style.visibility = "hidden"
+    elements.toTopButton.style.opacity = 0
   }
 })
 
