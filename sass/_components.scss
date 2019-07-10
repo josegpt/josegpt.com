@@ -1,14 +1,14 @@
 .title-box {
   display: grid;
   justify-content: center;
-  margin: 10rem 0;
+  margin: 25rem 0;
   
   &__heading {
     text-align: center;
     margin-bottom: 4rem;
     &--main {
       display: block;
-      font-size: 7rem;
+      font-size: 5rem;
       font-weight: 300;
       text-transform: uppercase;
     }
@@ -68,4 +68,17 @@
       font-size: 3rem;
     }
   }
+}
+.to-top {
+  background-color: rgba($divider-color, .5);
+  bottom: 2rem;
+  color: $accent-color;
+  cursor: pointer;
+  font-size: 4rem;
+  opacity: 0;
+  padding: .2rem 2rem;
+  position: fixed;
+  right: 2rem;
+  visibility: hidden;
+  transition: all .3s;
 }

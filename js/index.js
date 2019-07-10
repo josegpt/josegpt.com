@@ -1,6 +1,7 @@
 /* Base */
 const elements = {
-  projects: document.querySelector(".section__main")
+  projects: document.querySelector(".section__main"),
+  toTopButton: document.querySelector(".to-top")
 }
 
 /* Global State */
@@ -27,7 +28,7 @@ const repositoryView = {
     const markup = `
       <article class="card">
         <header class="card__header">
-          <img src="https://makeawebsitehub.com/wp-content/uploads/2016/02/learn-code-e1455713167295.jpg" alt="Image" class="card__img">
+          <img src="img/default-project.jpg" alt="Image" class="card__img">
         </header>
         <main class="card__main">
           <h2 class="heading-secondary card__title">${name}</h2>
@@ -54,3 +55,23 @@ const repositoryView = {
     alert("Something is not working :/")
   }
 })()
+
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop)
+    window.scrollTo(0, c - c / 8)
+  }
+}
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 90) {
+    toTopButton.style.visibility = "visible"
+    toTopButton.style.opacity = 1
+  } else {
+    toTopButton.style.visibility = "hidden"
+    toTopButton.style.opacity = 0
+  }
+})
+
+elements.toTopButton.addEventListener("click", scrollToTop)
