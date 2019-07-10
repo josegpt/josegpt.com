@@ -32,7 +32,7 @@ const repositoryView = {
         </header>
         <main class="card__main">
           <h2 class="heading-secondary card__title">${name}</h2>
-          <a href="${html_url}" class="btn">See Project</a>
+          <a href="${html_url}" target="_blank" class="btn">See Project</a>
         </main>
       </article>
     `
