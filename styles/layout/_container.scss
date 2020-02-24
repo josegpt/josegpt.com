@@ -1,0 +1,6 @@
+.container {
+  background-color: var(--color-secondary-500);
+  color: var(--color-tertiary-500);
+  display: grid;
+  grid-template-rows: var(--header) calc(var(--main) - (var(--header) + var(--footer))) var(--footer);
+}
