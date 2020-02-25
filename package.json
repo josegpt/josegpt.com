@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "yarn build && next export"
   },
   "repository": "https://github.com/josegpt/pt-portfolio.git",
   "author": "Jose G. Perez Taveras <josegpt27@gmail.com>",
