@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import Icon from "../Icon"
 import Navigation from "./Navigation"
 
-const Header = ({ isDarkMode, setDarkMode, navigation }) => (
+const Header = ({ isDarkMode, toggleDarkMode, navigation }) => (
   <header className="header">
     <section className="logo">
       <a href="#" className="logo__link">
@@ -14,7 +14,7 @@ const Header = ({ isDarkMode, setDarkMode, navigation }) => (
     <section className="navigation">
       <button
         className="button"
-        onClick={() => setDarkMode()}
+        onClick={() => toggleDarkMode()}
       >
         { isDarkMode ? <Icon name="sun" /> : <Icon name="moon" /> }
       </button>
@@ -25,7 +25,7 @@ const Header = ({ isDarkMode, setDarkMode, navigation }) => (
 
 Header.propTypes = {
   isDarkMode: PropTypes.bool.isRequired,
-  setDarkMode: PropTypes.func.isRequired,
+  toggleDarkMode: PropTypes.func.isRequired,
   navigation: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,

@@ -8,7 +8,7 @@ import Main from "../components/Main"
 import Footer from "../components/Footer"
 
 export default () => {
-  const [isDarkMode, setDarkMode] = useDarkMode()
+  const [isDarkMode, toggleDarkMode] = useDarkMode()
 
   return (
     <div className="container" data-theme={ isDarkMode ? "dark" : "" }>
@@ -22,7 +22,7 @@ export default () => {
   
       <Header
         isDarkMode={isDarkMode}
-        setDarkMode={setDarkMode}
+        toggleDarkMode={toggleDarkMode}
         navigation={constants.navigation}
       />
       <Main

@@ -1,24 +1,20 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 export default () => {
-  const [isDarkMode, setDarkMode] = useState(window.localStorage.getItem("isDarkMode") || false)
+  const initialValue = () => {
+    const now = new Date()
+    const hour = now.getHours()
 
-  const toggleDarkMode = () => {
-    if (isDarkMode) {
-      window.localStorage.setItem("isDarkMode", false)
-      setDarkMode(false)
-    } else {
-      window.localStorage.setItem("isDarkMode", true)
-      setDarkMode(true)
+    if (hour < 4 || hour >= 16) {
+      return true
     }
+    
+    return false
   }
 
-  const setTheme = () => setDarkMode(!isDarkMode)
+  const [isDarkMode, setDarkMode] = useState(initialValue)
 
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("isDarkMode")
-    localTheme && setDarkMode(localTheme)
-  }, [isDarkMode])
- 
+  const toggleDarkMode = () => isDarkMode ? setDarkMode(false) : setDarkMode(true)
+
   return [isDarkMode, toggleDarkMode]
 }
