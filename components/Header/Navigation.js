@@ -1,17 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import NavigationItem from "./NavigationItem"
+import { Navigation, NavigationList } from "./HeaderStyles"
+import NavigationItemContainer from "./NavigationItem"
 
-const Navigation = ({ navigation }) => (
-  <nav className="navigation__holder">
-    <ul className="navigation__list">
-      {navigation.map((navItem, i) => <NavigationItem key={i} navItem={navItem} />)}
-    </ul>
-  </nav>
+const NavigationContainer = ({ navigation }) => (
+  <Navigation>
+    <NavigationList>
+      {navigation.map((navItem, i) => <NavigationItemContainer key={i} navItem={navItem} />)}
+    </NavigationList>
+  </Navigation>
 )
 
-Navigation.propTypes = {
+NavigationContainer.propTypes = {
   navigation: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
@@ -20,4 +21,4 @@ Navigation.propTypes = {
   ).isRequired
 }
 
-export default Navigation
+export default NavigationContainer

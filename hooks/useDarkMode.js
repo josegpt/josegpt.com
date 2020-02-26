@@ -1,20 +1,30 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default () => {
-  const initialValue = () => {
-    const now = new Date()
-    const hour = now.getHours()
+  const now = new Date()
+  const hour = now.getHours()
 
+  const initialValue = () => {
     if (hour < 4 || hour >= 16) {
       return true
     }
-    
+
     return false
   }
 
   const [isDarkMode, setDarkMode] = useState(initialValue)
 
-  const toggleDarkMode = () => isDarkMode ? setDarkMode(false) : setDarkMode(true)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (hour < 4 || hour >= 16) {
+        setDarkMode(true)
+      } else {
+        setDarkMode(false)
+      }
+    }, 1000)
 
-  return [isDarkMode, toggleDarkMode]
+    return () => clearInterval(interval)
+  })
+
+  return [isDarkMode, setDarkMode]
 }

@@ -1,17 +1,17 @@
 import Head from "next/head"
 import useDarkMode from "../hooks/useDarkMode"
 
-import "../styles/styles.scss"
 import constants from "../constants"
+import { Container } from "../components/Layout"
 import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
 
 export default () => {
-  const [isDarkMode, toggleDarkMode] = useDarkMode()
+  const [isDarkMode] = useDarkMode()
 
   return (
-    <div className="container" data-theme={ isDarkMode ? "dark" : "" }>
+    <Container data-theme={ isDarkMode ? "dark" : "" }>
       <Head>
         <meta name="description" content="My name is Jose G Perez Taveras and I am a Software Engineer" />
         <meta name="author" content="Jose G Perez Taveras" />
@@ -22,7 +22,6 @@ export default () => {
   
       <Header
         isDarkMode={isDarkMode}
-        toggleDarkMode={toggleDarkMode}
         navigation={constants.navigation}
       />
       <Main
@@ -33,6 +32,6 @@ export default () => {
         socialNetworks={constants.socialNetworks}
         copyright={constants.copyright}
       />
-    </div>
+    </Container>
   )
 }
