@@ -19,15 +19,15 @@ list-style: none;
 `
 
 export const SocialNetwork = styled.li`
-background-color: var(--color-primary-200);
-color: var(--color-primary-500);
+background-color: ${({ theme }) => theme.colors.primary["200"]};
+color: ${({ theme }) => theme.colors.primary["500"]};
 border-radius: 50%;
 margin: .64rem;
-transition: var(--animation);
+transition: ${({ theme }) => theme.animations.default};
 
 &:hover {
-  background-color: var(--color-primary-500);
-  color: var(--color-secondary-500);
+  background-color: ${({ theme }) => theme.colors.primary["500"]};
+  color: ${({ theme }) => theme.colors.secondary["500"]};
 }
 `
 
@@ -46,6 +46,6 @@ cursor: default;
 display: grid;
 margin-bottom: 2.56rem;
 text-align: center;
-transition: var(--animation);
+transition: ${({ theme }) => theme.animations.default};
 user-select: none;
 `

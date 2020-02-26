@@ -1,10 +1,12 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-background-color: var(--color-secondary-500);
-color: var(--color-tertiary-500);
+background-color: ${({ theme }) => theme.colors.secondary["500"]};
+color: ${({ theme }) => theme.colors.tertiary["500"]};
 display: grid;
-grid-template-rows: var(--header) calc(var(--main) - (var(--header) + var(--footer))) var(--footer);
+grid-template-rows: ${({ theme }) => {
+  return `${theme.layout.header} calc(${theme.layout.main} - (${theme.layout.header} + ${theme.layout.footer})) ${theme.layout.footer}`
+}};
 `
 
 export const Main = styled.main`

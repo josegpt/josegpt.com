@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Heading = styled.h1`
 cursor: default;
 text-align: center;
-transition: var(--animation);
+transition: ${({ theme }) => theme.animations.default};
 user-select: none;
 `
 
@@ -16,7 +16,7 @@ margin-bottom: -2rem;
 `
 
 export const SubTitle = styled.span`
-color: var(--color-primary-500);
+color: ${({ theme }) => theme.colors.primary["500"]};
 display: block;
 font-size: 2rem;
 font-weight: 400;

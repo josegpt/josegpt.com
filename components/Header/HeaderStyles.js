@@ -17,15 +17,14 @@ list-style: none;
 `
 
 export const NavigationItem = styled.li`
-transition: var(--animation);
+transition: ${({ theme }) => theme.animations.default};
 
 &:not(:last-child) {
   margin-right: 2.56rem;
 }
 
-&:hover,
-&--active {
-  color: var(--color-primary-500);
+&:hover {
+  color: ${({ theme }) => theme.colors.primary["500"]};
 }
 `
 
