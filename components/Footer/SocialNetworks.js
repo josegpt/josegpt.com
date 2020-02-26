@@ -1,19 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import SocialNetwork from "./SocialNetwork"
+import { SocialNetworks, SocialNetworksList } from "./FooterStyles"
+import SocialNetworkContainer from "./SocialNetwork"
 
-const SocialNetworks = ({ socialNetworks }) => (
-  <section className="socials-network">
-    <ul className="social-networks__list">
+const SocialNetworksContainer = ({ socialNetworks }) => (
+  <SocialNetworks>
+    <SocialNetworksList>
       {socialNetworks.map((socialNetwork, i) => (
-        <SocialNetwork key={i} socialNetwork={socialNetwork} />
+        <SocialNetworkContainer key={i} socialNetwork={socialNetwork} />
       ))}
-    </ul>
-  </section>
+    </SocialNetworksList>
+  </SocialNetworks>
 )
 
-SocialNetworks.propTypes = {
+SocialNetworksContainer.propTypes = {
   socialNetworks: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.string.isRequired,
@@ -22,4 +23,4 @@ SocialNetworks.propTypes = {
   ).isRequired
 }
 
-export default SocialNetworks
+export default SocialNetworksContainer

@@ -1,19 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const NavigationItem = ({ navItem }) => (
-  <li className="navigation__item">
-    <a href={navItem.url} target="_blank" className="navigation__link">
+import { NavigationItem, NavigationLink } from "./HeaderStyles"
+
+
+const NavigationItemContainer = ({ navItem }) => (
+  <NavigationItem>
+    <NavigationLink
+      href={navItem.url}
+      target="_blank"
+    >
       { navItem.text }
-    </a>
-  </li>
+    </NavigationLink>
+  </NavigationItem>
 )
 
-NavigationItem.propTypes = {
+NavigationItemContainer.propTypes = {
   navItem: PropTypes.shape({
     text: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
   }).isRequired
 }
 
-export default NavigationItem
+export default NavigationItemContainer

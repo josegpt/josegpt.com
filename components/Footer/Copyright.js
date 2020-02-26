@@ -1,21 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Copyright = ({ copyright }) => {
+import { Copyright } from "./FooterStyles"
+
+
+const CopyrightContainer = ({ copyright }) => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <section className="copyright">
+    <Copyright>
       { copyright.brand } &copy; { copyright.year } &mdash; { currentYear }
-    </section>
+    </Copyright>
   )
 }
 
-Copyright.propTypes = {
+CopyrightContainer.propTypes = {
   copyright: PropTypes.shape({
     brand: PropTypes.string.isRequired,
     year: PropTypes.number.isRequired
   }).isRequired
 }
 
-export default Copyright
+export default CopyrightContainer

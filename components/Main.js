@@ -1,19 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { Main } from "./Layout"
+import { Heading, Title, SubTitle } from "./Typography"
 
-const Main = ({ name, profession }) => (
-  <main className="main">
-    <h1 className="heading-primary">
-      <span className="heading-primary--main">{name}</span>
-      <span className="heading-primary--sub">{profession}</span>
-    </h1>
-  </main>
+const MainContainer = ({ name, profession }) => (
+  <Main>
+    <Heading>
+      <Title>{ name }</Title>
+      <SubTitle>{ profession }</SubTitle>
+    </Heading>
+  </Main>
 )
 
-Main.propTypes = {
+MainContainer.propTypes = {
   name: PropTypes.string.isRequired,
   profession: PropTypes.string.isRequired
 }
 
-export default Main
+export default MainContainer

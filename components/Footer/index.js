@@ -1,18 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { Footer } from "./FooterStyles"
 import SocialNetworks from "./SocialNetworks"
 import Copyright from "./Copyright"
 
-const Footer = ({ socialNetworks, copyright }) => (
-  <footer className="footer">
+const FooterContainer = ({ socialNetworks, copyright }) => (
+  <Footer>
     <SocialNetworks socialNetworks={socialNetworks} />
     <Copyright copyright={copyright} />
-  </footer>
+  </Footer>
 )
 
-
-Footer.propTypes = {
+FooterContainer.propTypes = {
   socialNetworks: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.string,
@@ -25,4 +25,4 @@ Footer.propTypes = {
   }).isRequired
 }
 
-export default Footer
+export default FooterContainer
