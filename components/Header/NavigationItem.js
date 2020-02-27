@@ -9,6 +9,7 @@ const NavigationItemContainer = ({ navItem }) => (
     <NavigationLink
       href={navItem.url}
       target="_blank"
+      rel="noreferrer"
     >
       { navItem.text }
     </NavigationLink>

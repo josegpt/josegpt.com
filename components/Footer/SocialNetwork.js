@@ -9,6 +9,8 @@ const SocialNetworkContainer = ({ socialNetwork }) => (
     <SocialNetworkLink
       href={socialNetwork.url}
       target="_blank"
+      rel="noreferrer"
+      aria-label={socialNetwork.icon}
     >
       <Icon name={socialNetwork.icon} />
     </SocialNetworkLink>

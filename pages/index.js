@@ -1,16 +1,32 @@
 import Head from "next/head"
+import { useEffect } from "react"
 import { ThemeProvider } from "styled-components"
 
 import theme, { GlobalStyle, lightTheme, darkTheme } from "../theme"
-import useDarkMode from "../hooks/useDarkMode"
 import constants from "../constants"
 import { Container } from "../components/Layout"
 import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
+import useDarkMode from "../hooks/useDarkMode"
 
 export default () => {
-  const [isDarkMode] = useDarkMode()
+  const [isDarkMode, setDarkMode] = useDarkMode()
+  
+  useEffect(() => {
+    const now = new Date()
+    const hour = now.getHours()
+
+    const interval = setInterval(() => {
+      if (hour < 4 || hour >= 16) {
+        setDarkMode(true)
+      } else {
+        setDarkMode(false)
+      }
+    }, 1000)
+
+    return () => clearInterval(interval)
+  })
 
   return (
     <ThemeProvider theme={{ ...theme, colors: isDarkMode ? darkTheme : lightTheme  }}>
@@ -26,7 +42,6 @@ export default () => {
           </Head>
       
           <Header
-            isDarkMode={isDarkMode}
             navigation={constants.navigation}
           />
           <Main
