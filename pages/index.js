@@ -18,11 +18,12 @@ export default () => {
     const hour = now.getHours()
 
     const interval = setInterval(() => {
-      if (hour < 4 || hour >= 16) {
+      if (hour > 4 || hour >= 16) {
         setDarkMode(true)
       } else {
         setDarkMode(false)
       }
+      console.log("DARK MODE", isDarkMode)
     }, 1000)
 
     return () => clearInterval(interval)
