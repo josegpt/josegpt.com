@@ -1,18 +1,18 @@
 import { useState } from "react"
 
-export default (value) => {
+export const isNight = () => {
   const now = new Date()
   const hour = now.getHours()
 
-  const initialValue = () => {
-    if (hour < 4 || hour >= 16) {
-      return true
-    }
-
-    return false
+  if (hour < 4 || hour >= 16) {
+    return true
   }
 
-  const [isDarkMode, setDarkMode] = useState(value || initialValue)
+  return false
+}
+
+export const useDarkMode = (value) => {
+  const [isDarkMode, setDarkMode] = useState(value || isNight)
 
   return [isDarkMode, setDarkMode]
 }
