@@ -44,7 +44,7 @@ export const Copyright = styled.section`
 align-items: center;
 cursor: default;
 display: grid;
-margin-bottom: 2.56rem;
+margin-bottom: .32rem;
 text-align: center;
 transition: ${({ theme }) => theme.animations.default};
 user-select: none;
