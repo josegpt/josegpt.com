@@ -1,0 +1,21 @@
+<template>
+  <header class="header">
+    <slot />
+  </header>
+</template>
+
+<script>
+export default {
+  name: "Header"
+}
+</script>
+
+<style lang="scss">
+.header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  padding: 0 var(--space-d);
+}
+</style>

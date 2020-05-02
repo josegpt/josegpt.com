@@ -1,26 +1,23 @@
 {
-  "name": "pt-portfolio",
+  "name": "josegpt.com",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "yarn build && next export"
-  },
-  "repository": "https://github.com/josegpt/pt-portfolio.git",
-  "author": "Jose G. Perez Taveras <josegpt27@gmail.com>",
-  "license": "MIT",
+  "description": "My personal space :)",
+  "author": "Jose G Perez Taveras",
   "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
   "dependencies": {
-    "feather-icons-react": "^0.4.1",
-    "next": "^9.3.4",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "styled-components": "^5.1.0"
+    "core-js": "2.6.10",
+    "feather-icons": "^4.28.0",
+    "nuxt": "^2.0.0",
+    "vue-feather": "^1.0.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7"
+    "node-sass": "^4.14.0",
+    "sass-loader": "^8.0.2"
   }
 }
