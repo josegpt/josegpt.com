@@ -40,7 +40,7 @@ export default {
     isNite: false,
     logo: {
       path: "/img/execode-logo",
-      url: "josegpt.com"
+      url: "https://josegpt.com"
     },
     navigation: [
       {
