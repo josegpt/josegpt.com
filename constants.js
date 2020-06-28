@@ -1,44 +1,45 @@
 export default {
   name: "Jose G",
   profession: "software engineer",
+  logo: "img/execode-logo.svg",
   copyright: {
     brand: "josegpt",
-    year: 2015
+    year: 2015,
   },
   navigation: [
     {
       text: "projects",
-      url: "https://github.com/josegpt?tab=repositories"
-    }
+      link: "https://github.com/josegpt?tab=repositories",
+    },
   ],
-  socialNetworks: [
+  socialNetwork: [
     {
-      icon: "mail",
-      url: "mailto:josegpt27@gmail.com"
+      iconName: "mail",
+      link: "mailto:josegpt27@gmail.com",
     },
     {
-      icon: "linkedin",
-      url: "https://www.linkedin.com/in/josegpt"
+      iconName: "linkedin",
+      link: "https://www.linkedin.com/in/josegpt",
     },
     {
-      icon: "github",
-      url: "https://github.com/josegpt"
+      iconName: "github",
+      link: "https://github.com/josegpt",
     },
     {
-      icon: "codepen",
-      url: "https://codepen.io/josegpt"
+      iconName: "codepen",
+      link: "https://codepen.io/josegpt",
     },
     {
-      icon: "facebook",
-      url: "https://www.facebook.com/josegpt27"
+      iconName: "facebook",
+      link: "https://www.facebook.com/josegpt27",
     },
     {
-      icon: "twitter",
-      url: "https://twitter.com/josegpete"
+      iconName: "twitter",
+      link: "https://twitter.com/josegpete",
     },
     {
-      icon: "instagram",
-      url: "https://www.instagram.com/josegpt/"
-    }
-  ]
+      iconName: "instagram",
+      link: "https://www.instagram.com/josegpt/",
+    },
+  ],
 }
