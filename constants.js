@@ -26,6 +26,10 @@ export default {
       link: "https://github.com/josegpt",
     },
     {
+      iconName: "gitlab",
+      link: "https://gitlab.com/josegpt",
+    },
+    {
       iconName: "codepen",
       link: "https://codepen.io/josegpt",
     },
