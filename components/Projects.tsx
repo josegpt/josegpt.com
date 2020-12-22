@@ -32,8 +32,12 @@ type ProjectsProps = {
 const Projects = ({ isOpen, hideMenu }: ProjectsProps) => {
   const { data, error } = useSWR("https://api.github.com/users/josegpt/repos")
 
-  if (error) return <h1>Sorry :(</h1>
-  if (!data) return <h1>Loading...</h1>
+  const Content = () => {
+    if (error) return <h1>Sorry :(</h1>
+    if (!data) return <h1>Loading...</h1>
+
+    return data.map(ProjectItems)
+  }
 
   return (
     <div>
@@ -60,7 +64,7 @@ const Projects = ({ isOpen, hideMenu }: ProjectsProps) => {
           </button>
         </header>
         <div className="grid justify-center h-full grid-cols-1 gap-2 px-6 overflow-y-auto sm:grid-cols-2 md:grid-cols-3">
-          {data.map(ProjectItems)}
+          <Content />
         </div>
       </div>
     </div>
