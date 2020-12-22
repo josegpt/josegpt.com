@@ -7,7 +7,7 @@ const Index = () => (
   </div>
 )
 
-export const getServerSideProps = () => {
+export const getStaticProps = () => {
   const now = new Date()
   const hours = now.getHours() % 12
   const period = now.getHours() >= 12 ? "pm" : "am"
