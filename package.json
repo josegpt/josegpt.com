@@ -1,27 +1,28 @@
 {
-  "name": "pt-portfolio",
+  "name": "josegpt.com",
   "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/josegpt/josegpt.com",
+  "author": "Jose G Perez Taveras <josegpt27@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "yarn build && next export"
+    "build": "next build && next export",
+    "start": "next start"
   },
-  "repository": "https://github.com/josegpt/pt-portfolio.git",
-  "author": "Jose G. Perez Taveras <josegpt27@gmail.com>",
-  "license": "MIT",
-  "private": true,
   "dependencies": {
-    "next": "^9.4.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "classnames": "^2.2.6",
+    "next": "^10.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "swr": "^0.3.11"
   },
   "devDependencies": {
-    "@types/node": "^14.0.14",
-    "@types/react": "^16.9.41",
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.6",
-    "typescript": "^3.9.5"
+    "@types/node": "^14.14.14",
+    "@types/react": "^17.0.0",
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
+    "tailwindcss": "^2.0.2",
+    "typescript": "^4.1.3"
   }
 }

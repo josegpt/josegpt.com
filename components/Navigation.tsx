@@ -1,39 +1,27 @@
 import React from "react"
 
-interface iNavigationItem {
+type NavigationButtonProps = {
   text: string
-  link: string
+  onClick: () => void
 }
 
-function NavigationItem({ text, link }: iNavigationItem): JSX.Element {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-      className="block text-sm font-semibold tracking-wide lowercase hover:text-red-500 sm:text-lg"
-    >
-      {text}
-    </a>
-  )
+export const NavigationButton = ({ text, onClick }: NavigationButtonProps) => (
+  <button
+    onClick={onClick}
+    className="font-semibold tracking-wider lowercase transition duration-300 ease-in-out hover:text-red-500 "
+  >
+    {text}
+  </button>
+)
+
+type NavigationProps = {
+  children: JSX.Element[]
 }
 
-interface iNavigation {
-  navigation: iNavigationItem[]
-}
-
-function Navigation({ navigation }: iNavigation): JSX.Element {
-  return (
-    <nav className="flex py-4">
-      {navigation.map((element) => (
-        <NavigationItem
-          key={element.text}
-          text={element.text}
-          link={element.link}
-        />
-      ))}
-    </nav>
-  )
-}
+const Navigation = ({ children }: NavigationProps) => (
+  <nav className="flex items-center justify-between px-6 h-28 sm:justify-around">
+    {children}
+  </nav>
+)
 
 export default Navigation

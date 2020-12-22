@@ -1,23 +1,16 @@
 import React from "react"
-import Link from "next/link"
+import NextLink from "next/link"
 
-interface iLogo {
-  brandName: string
-  logoPath: string
-}
-
-function Logo({ brandName, logoPath }: iLogo): JSX.Element {
-  return (
-    <Link href="/">
-      <a className="block">
-        <img
-          src={logoPath}
-          alt={brandName}
-          className="w-24 h-24 sm:h-32 sm:w-32"
-        />
-      </a>
-    </Link>
-  )
-}
+const Logo = () => (
+  <NextLink href="/">
+    <a className="flex items-center">
+      <img
+        src="img/execode-logo.svg"
+        alt="josegpt.com"
+        className="w-24 h-24 sm:h-32 sm:w-32"
+      />
+    </a>
+  </NextLink>
+)
 
 export default Logo

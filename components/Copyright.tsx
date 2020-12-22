@@ -1,19 +1,13 @@
 import React from "react"
 
-interface iCopyright {
-  brandName: string
-  startingYear: number
-}
-
-function Copyright({ brandName, startingYear }: iCopyright): JSX.Element {
+const Copyright = () => {
   const currentYear = new Date().getFullYear()
+
   return (
-    <p className="text-sm sm:text-base">
-      <span className="font-bold text-red-500">{brandName} </span>
-      <span className="font-medium">
-        &copy; {startingYear} &mdash; {currentYear}
-      </span>
-    </p>
+    <div className="flex justify-center my-4 font-light">
+      <span className="font-semibold text-red-500 lowercase">josegpt</span>{" "}
+      &copy; 1992 &mdash; {currentYear}
+    </div>
   )
 }
 
