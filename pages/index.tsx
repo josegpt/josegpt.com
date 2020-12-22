@@ -7,17 +7,4 @@ const Index = () => (
   </div>
 )
 
-export const getStaticProps = () => {
-  const now = new Date()
-  const hours = now.getHours() % 12
-  const period = now.getHours() >= 12 ? "pm" : "am"
-
-  return {
-    props: {
-      theme: hours >= 6 && period === "pm" ? "dark" : "light",
-    },
-    revalidate: 1,
-  }
-}
-
 export default Index
