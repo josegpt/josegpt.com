@@ -16,6 +16,7 @@ export const getStaticProps = () => {
     props: {
       theme: hours >= 6 && period === "pm" ? "dark" : "light",
     },
+    revalidate: 1,
   }
 }
 
