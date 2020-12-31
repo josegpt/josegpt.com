@@ -12,7 +12,7 @@ const Index = ({ repository, isMenuOpen, hideMenu }) => (
   </div>
 )
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try {
     const { data } = await axios.get(
       "https://api.github.com/users/josegpt/repos"
