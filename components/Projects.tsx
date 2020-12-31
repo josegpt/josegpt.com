@@ -42,15 +42,16 @@ const Projects = ({ repository, isOpen, hideMenu }: ProjectsProps) => (
   <div>
     <div
       onClick={hideMenu}
-      className={classnames(
-        "fixed inset-0 bg-black opacity-25 dark:bg-white",
-        isOpen ? "block" : "hidden"
-      )}
+      className={classnames("fixed inset-0 bg-black opacity-25 dark:bg-white", {
+        block: isOpen,
+        hidden: !isOpen,
+      })}
     />
     <div
       className={classnames(
         "fixed bottom-0 z-10 w-full max-w-xl transition duration-300 pb-16 ease-in-out transform -translate-x-1/2 bg-gray-100 inset-x-1/2 h-5/6 rounded-tl-xl rounded-tr-xl dark:bg-black",
-        isOpen ? "translate-y-0" : "translate-y-full"
+        isOpen ? "translate-y-0" : "translate-y-full",
+        { "translate-y-0": isOpen, "translate-y-full": !isOpen }
       )}
     >
       <header className="flex items-center justify-between h-16 mx-6">
