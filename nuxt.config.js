@@ -73,6 +73,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "nuxt-i18n",
+    "@nuxtjs/google-analytics",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -82,6 +83,10 @@ export default {
   build: {},
 
   tailwindcss: {},
+
+  googleAnalytics: {
+    id: "UA-120228904-1",
+  },
 
   i18n: {
     locales: [
