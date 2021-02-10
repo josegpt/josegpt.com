@@ -1,6 +1,15 @@
 <template>
   <Navigate :to="{ name: 'index' }" class="flex items-center">
-    <img :src="src" :alt="username" class="w-20 h-20 sm:h-32 sm:w-32" />
+    <img
+      src="/img/execode-logo-variant.svg"
+      :alt="username"
+      class="hidden w-20 h-20 dark:block sm:h-32 sm:w-32"
+    />
+    <img
+      src="/img/execode-logo.svg"
+      :alt="username"
+      class="block w-20 h-20 dark:hidden sm:h-32 sm:w-32"
+    />
   </Navigate>
 </template>
 
@@ -15,10 +24,6 @@ export default Vue.extend({
   },
   props: {
     username: {
-      type: String,
-      required: true,
-    },
-    src: {
       type: String,
       required: true,
     },
