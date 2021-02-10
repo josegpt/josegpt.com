@@ -7,10 +7,10 @@
     />
     <div
       :class="{ 'translate-y-0': isOpen, 'translate-y-full': !isOpen }"
-      class="fixed inset-x-0 bottom-0 max-w-2xl pb-16 mx-auto transition duration-300 ease-in-out delay-200 transform bg-white rounded-t-lg h-2/4 dark:bg-black"
+      class="fixed inset-x-0 bottom-0 max-w-3xl pb-16 mx-auto transition duration-300 ease-in-out delay-200 transform bg-white rounded-t-lg h-3/4 dark:bg-black"
     >
       <header class="flex items-center justify-between h-16 mx-6">
-        <h2 class="text-3xl font-semibold capitalize">{{ $t("projects") }}</h2>
+        <h2 class="text-3xl font-bold capitalize">{{ $t("projects") }}</h2>
         <IconButton @click="$emit('click')" iconName="x" />
       </header>
       <div
@@ -24,7 +24,7 @@
       </div>
       <div
         v-else
-        class="grid h-full grid-cols-1 gap-6 px-6 overflow-y-auto sm:grid-cols-2 md:grid-cols-3"
+        class="grid h-full grid-cols-1 gap-6 px-6 overflow-y-auto xs:grid-cols-2 xl:grid-cols-3"
       >
         <ProjectCard
           v-for="{ name, html_url } in projects.data"

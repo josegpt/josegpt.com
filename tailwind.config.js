@@ -1,6 +1,12 @@
+const { screens } = require("tailwindcss/defaultTheme")
+
 module.exports = {
   darkMode: "media",
   theme: {
+    screens: {
+      xs: "439px",
+      ...screens,
+    },
     extend: {
       colors: {
         red: {
