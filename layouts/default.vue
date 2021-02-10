@@ -4,7 +4,7 @@
   >
     <Navbar>
       <template v-slot:left>
-        <Logo :username="$t('username')" src="/img/execode-logo.svg" />
+        <Logo :username="$t('username')" />
       </template>
       <template v-slot:right>
         <ChangeLang />
