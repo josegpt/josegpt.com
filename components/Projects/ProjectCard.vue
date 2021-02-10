@@ -8,7 +8,7 @@
     <div class="absolute top-0 right-0 m-4">
       <Icon name="arrow-up-right" />
     </div>
-    <span class="text-xl font-semibold whitespace-nowrap">
+    <span class="text-2xl font-semibold whitespace-nowrap">
       {{ computedName }}
     </span>
   </a>
@@ -35,7 +35,7 @@ export default Vue.extend({
   },
   computed: {
     computedName(): string {
-      const maxLength = 17
+      const maxLength = 10
       return this.name.length > maxLength
         ? `${this.name.substr(0, maxLength)}...`
         : this.name

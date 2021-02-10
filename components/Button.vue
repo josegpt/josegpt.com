@@ -1,7 +1,7 @@
 <template>
   <button
     @click="$emit('click')"
-    class="flex items-center px-4 py-2 text-red-500 transition duration-300 ease-in-out border-2 border-red-500 rounded-lg sm:space-x-2 focus:outline-none hover:bg-red-500 hover:text-white"
+    class="flex items-center px-4 py-2 text-red-500 transition duration-300 ease-in-out border-2 border-red-500 rounded-lg sm:space-x-2 focus:outline-none hover:bg-red-500 hover:text-white dark:hover:text-black"
   >
     <Icon v-if="iconName" :name="iconName" class="hidden sm:flex" />
     <span class="text-sm font-semibold tracking-wide uppercase sm:text-base">
