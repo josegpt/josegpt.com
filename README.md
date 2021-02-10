@@ -1,5 +1,20 @@
-# PT Porftolio
+# josegpt.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8f3d69d3-959c-4218-a4bb-33c7a330da03/deploy-status)](https://app.netlify.com/sites/blissful-brattain-af2934/deploys)
+## Build Setup
 
-This is my personal space :)
+```bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
