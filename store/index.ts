@@ -1,7 +1,9 @@
-import { GetterTree, ActionTree, MutationTree } from "vuex"
+import { GetterTree, MutationTree } from "vuex"
+import { noForks } from "~/utils"
 
 export type Project = {
   name: string
+  fork: boolean
   html_url: string
 }
 
@@ -28,21 +30,6 @@ export const getters: GetterTree<State, State> = {
   projects: (state) => state.projects,
 }
 
-export const actions: ActionTree<State, State> = {
-  async nuxtServerInit({ commit }, { $axios }) {
-    commit("setError", "")
-
-    try {
-      const response = await $axios.get(
-        "https://api.github.com/users/josegpt/repos"
-      )
-      commit("setProjects", response.data)
-    } catch {
-      commit("setError", "there was an error getting the projects")
-    }
-  },
-}
-
 export const mutations: MutationTree<State> = {
   showMenu(state) {
     state.isMenuOpen = true
@@ -52,7 +39,7 @@ export const mutations: MutationTree<State> = {
   },
   setProjects(state, projects) {
     state.projects.success = true
-    state.projects.data = projects
+    state.projects.data = projects.filter(noForks)
   },
   setError(state, error) {
     state.projects.success = false
