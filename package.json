@@ -9,6 +9,7 @@
     "build": "parcel build public/index.html"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.2",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "9",
     "elm": "^0.19.1-5",
@@ -19,8 +20,5 @@
     "postcss": "7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
-  "assetsPath": "public/assets/img",
-  "dependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.2"
-  }
+  "assetsPath": "public/assets/img"
 }
