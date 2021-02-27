@@ -2,9 +2,7 @@
 @tailwind components;
 
 html,
-body,
-#__nuxt,
-#__layout {
+body {
   @apply h-full;
 }
 

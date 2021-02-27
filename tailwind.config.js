@@ -1,10 +1,12 @@
-const { screens } = require("tailwindcss/defaultTheme")
+const { screens } = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  purge: ["./src/**/*.elm"],
   darkMode: "media",
   theme: {
     screens: {
-      xs: "439px",
+      xxs: "340px",
+      xs: "440px",
       ...screens,
     },
     extend: {
@@ -28,4 +30,4 @@ module.exports = {
       display: ["dark"],
     },
   },
-}
+};
