@@ -1,40 +1,25 @@
 {
   "name": "josegpt.com",
   "version": "1.0.0",
-  "private": true,
+  "repository": "https://github.com/josegpt/josegpt.com.git",
+  "author": "Jose G Perez Taveras <josegpt27@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
-    "test": "yarn test:unit && yarn test:e2e",
-    "test:unit": "cross-env TEST=unit ava ./test/specs/**/*",
-    "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
-  },
-  "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.1",
-    "@nuxtjs/axios": "^5.12.5",
-    "core-js": "^3.8.3",
-    "nuxt": "^2.14.12",
-    "nuxt-i18n": "^6.20.0"
+    "dev": "parcel public/index.html",
+    "build": "parcel build public/index.html"
   },
   "devDependencies": {
-    "@ava/babel": "^1.0.1",
-    "@nuxt/types": "^2.14.12",
-    "@nuxt/typescript-build": "^2.0.4",
-    "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/tailwindcss": "^3.4.2",
-    "@vue/test-utils": "^1.1.2",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "9",
-    "ava": "^3.15.0",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "cross-env": "^7.0.3",
-    "jsdom": "^16.4.0",
-    "jsdom-global": "^3.0.2",
+    "elm-hot": "^1.1.6",
+    "node-elm-compiler": "^5.0.5",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-asset-copier": "^1.1.0",
     "postcss": "7",
-    "require-extension-hooks": "^0.3.3",
-    "require-extension-hooks-babel": "^1.0.0",
-    "require-extension-hooks-vue": "^3.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "assetsPath": "public/assets/img",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.2"
   }
 }
