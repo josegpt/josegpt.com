@@ -73,12 +73,20 @@ type alias Model =
 
 init : Maybe String -> ( Model, Cmd Msg )
 init maybeLang =
-    ( { lang = Localization.fromString maybeLang
+    let
+        currentLang =
+            Localization.fromMaybeString maybeLang
+    in
+    ( { lang = currentLang
       , modal = False
       , currentYear = 0
       , projects = Loading
       }
-    , Cmd.batch [ getGitProjects, getCurrentYear ]
+    , Cmd.batch
+        [ getGitProjects
+        , getCurrentYear
+        , setLang <| Localization.toString currentLang
+        ]
     )
 
 
