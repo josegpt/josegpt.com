@@ -1,4 +1,4 @@
-module Localization exposing (Lang(..), Localization, fromString, localizations, toString)
+module Localization exposing (Lang(..), Localization, fromMaybeString, fromString, localizations, toString)
 
 -- TYPES
 
@@ -29,9 +29,22 @@ toString lang =
             "ES"
 
 
-fromString : Maybe String -> Lang
+fromString : String -> Lang
 fromString lang =
     case lang of
+        "EN" ->
+            EN
+
+        "ES" ->
+            ES
+
+        _ ->
+            EN
+
+
+fromMaybeString : Maybe String -> Lang
+fromMaybeString maybeLang =
+    case maybeLang of
         Just "EN" ->
             EN
 
